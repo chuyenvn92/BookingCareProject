@@ -1,0 +1,619 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 Nov 2020, 05:51:07
+    Author     : chuyen
+*/
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+#topbar {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: flex-end;
+    position: fixed;
+    background-color: white;
+    padding-top: 9px;
+}
+
+#searchbarimage {
+    height: 30px;
+    padding: 0px 28px 10px 30px;
+    cursor: pointer;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+#searchbarmic {
+    height: 45px;
+    width: 35px;
+    margin-left: auto;
+    background-color: white;
+}
+
+#searchbarmic img {
+    height: 25px;
+}
+
+#searchbarbutton {
+    height: 45px;
+    width: 55px;
+    position: relative;
+    margin-right: -2px;
+    background-color: white;
+}
+
+#searchbarbutton svg {
+    height: 25px;
+    width: 35px;
+    position: relative;
+    left: -3px;
+}
+
+#searchbarbutton svg path {
+    fill: #4285F4
+}
+
+#searchbar {
+    width: 625px;
+    height: 45px;
+    border-radius: 100px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 16px;
+    position: relative;
+    bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    z-index: 100;
+}
+
+#searchbar:hover {
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+#searchbar > input {
+    height: 45px;
+    border-style: none;
+    font-size: 16px;
+    line-height: 45px;
+    padding-left: 20px;
+    flex: 1;
+}
+
+#searchbar > input:focus {
+    outline: none;
+}
+
+#searchbar button {
+    border: none;
+    cursor: pointer;
+}
+
+#searchbar button:focus {
+    outline: none;
+}
+
+#boxesicon {
+    width: 25px;
+    height: 25px;
+    background-image: url('images/boxes.png');
+    opacity: 0.6;
+    background-size: 26px;
+    position: absolute;
+    right: 130px;
+    bottom: 14px;
+}
+
+#optionsmenuactive::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #4285F4;
+    left: 5px;
+    bottom: 0px;
+}
+
+#optionsmenu2 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 100px;
+}
+
+#optionsmenu2 li {
+    padding: 0px 10px 15px 20px;
+}
+
+#searchresultsarea {
+    margin-left: 150px;
+    font-family: 'Arial';
+}
+
+#searchresultsnumber {
+    font-size: 1rem;
+    color: gray;
+}
+
+.searchresult {
+    margin-left: 8px;
+}
+
+.searchresult h2 {
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: normal;
+    color: rgb(29, 1, 189);
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.searchresult a {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 0px;
+}
+
+.searchresult button {
+    font-size: 10px;
+    line-height: 14px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border-width: 0px;
+    background-color: white;
+}
+
+#bellicon {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(105, 105, 105);
+    background-image: url('images/bell.png');
+    background-size: 12px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    position: absolute;
+    right: 90px;
+    bottom: 18px;
+}
+
+#profileimage {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 40px;
+    bottom: 12px;
+}
+
+#optionsbar {
+    width: 100%;
+    height: 50px;
+    border-width: 0px;
+    border-bottom: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Arial';
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+    padding-top: 64px;
+}
+
+#optionsmenu1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 150px;
+}
+
+#optionsmenu1 li {
+    padding: 0px 10px 15px 20px;
+}
+
+#optionsmenuactive {
+    color: #4285F4;
+    font-weight: bold;
+    position: relative;
+    z-index: -1;
+}
+
+.searchresult p {
+    width: 625px;
+    font-size: 13px;
+    margin-top: 0px;
+    color: rgb(82, 82, 82);
+}
+
+.relatedsearches h3 {
+    font-weight: normal;
+    font-size: 19px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.relatedlists ul {
+    list-style: none;
+    color: rgb(29, 1, 189);
+    padding-left: 0px;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.relatedlists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.relatedlists ul li {
+    margin-bottom: 8px;
+}
+
+.pagelist {
+    list-style: none;
+    color: rgb(29, 135, 255);
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.pagelistprevious::before {
+    content: '<';
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: -35px;
+    color: rgb(29, 135, 255);
+    font-size: 20px;
+    transform: scale(0.7, 1.2);
+}
+
+.pagelistprevious::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: -35px;
+    width: 40px;
+    height: 40px;
+    background-image: url('images/g.png');
+    background-repeat: no-repeat;
+    background-size: 28px;
+}
+
+.pagelistfirst {
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.pagelistnumber::before, .pagelistfirst::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -21px;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    z-index: 3;
+}
+
+.pagelistnumber::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -6px;
+    top: -25px;
+    border-radius: 50px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255, 196, 0);
+    z-index: 2;
+}
+
+.pagelistfirst::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -6px;
+    top: -25px;
+    border-radius: 50px;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    z-index: 2;
+}
+
+.pagelist li {
+    margin-right: 15px;
+    position: relative;
+}
+
+.pagelistnext {
+    margin-left: 40px;
+    font-size: 13px;
+}
+
+.pagelistnext::before {
+    content: '>';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: -35px;
+    color: rgb(29, 135, 255);
+    font-size: 20px;
+    transform: scale(0.7, 1.2);
+}
+
+.pagelistnext::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -55px;
+    top: -37px;
+    width: 50px;
+    height: 50px;
+    background-image: url('images/gle.png');
+    background-repeat: no-repeat;
+    background-size: 48px;
+}
+
+
+#footer {
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'arial';
+    color: rgb(85, 85, 85);
+}
+
+#footermenu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 135px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+#footermenu li {
+    padding-right: 30px;
+}
+
+#footerlocation {
+    display: flex;
+    direction: row;
+    margin-left: 175px;
+    position: relative;
+    top: -5px;
+}
+
+#footerlocation p:nth-of-type(1) {
+    font-weight: bold;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 Oct 2020, 11:50:47
+    Author     : chuyen
+*/
+body {
+    font-size: 13px;
+  }
+  
+  .page {
+    padding-top: 20vh;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 25vh;
+  }
+  .quad {
+      border-radius: 5px;
+  }
+
+  li {
+      list-style-type: none;
+  }
+ a {
+    text-decoration: none;
+}
+  .logo {
+    padding-bottom: 15px;
+  }
+  
+  .search {
+    width: 45vw;
+    padding: 8px;
+    border: 1px solid #d9d9d9;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat;
+    background-position: 98.5%;
+    background-size: 1.5em;
+  }
+  
+  .search:hover {
+    border: 1px solid #b9b9b9;
+    border-top-color: #a0a0a0;
+  }
+  
+  .search:focus {
+    outline: none;
+    border: 1px solid #4d90fe;
+  }
+  
+  .Bcontainer {
+    text-align: center;
+    margin: 0 auto;
+    width: 340px;
+    padding-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    background: #f2f2f2;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    font-family: arial, sans-serif;
+  }
+  
+  .button:hover {
+    border: 1px solid #c6c6c6;
+    color: #222;
+    cursor: default;
+  }
+  
+  .left {
+    float: left;
+  }
+  
+  .nav > li > a {
+    padding: 0;
+    color: #000;
+    opacity: .75;
+  }
+  
+  .nav > li > .colorfix {
+    opacity: 1;
+  }
+  
+  .nav>li>a:hover,
+  .nav>li>a:visited,
+  .nav>li>a:focus {
+    background-color: white;
+    text-decoration: underline;
+  }
+  
+  .nav-pills {
+    margin: 15px 5px;
+  }
+  
+  .nav li {
+    float: right;
+    margin-right: 15px;
+  }
+  
+  .firstsbuttons {
+    margin-top: 4.5px;
+  }
+  
+  .btn,
+  .btn:active {
+    color: white;
+    font-weight: 700;
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+    padding: 4px 10.5px;
+    border: 1px solid #4285f4;
+    border-radius: 2px;
+    font-size: 13px;
+  }
+  
+  .btn.focus,
+  .btn:focus,
+  .btn:hover,
+  .btn:visited,
+  .btn:active {
+    color: white;
+    cursor: default;
+  }
+  
+  .nav>li>a>img {
+    opacity: .75;
+  }
+  
+  .nav>li>a>img:hover {
+    opacity: 1;
+    cursor: default;
+  }
+
+body, td, a, p, .h {
+font-family: arial,sans-serif;
+}
+Inherited from html
+body, html {
+font-size: small;
+}
+#fsr{
+    margin-right:30px
+}
+.fmulti #fsr{
+    margin-right:0
+}
+._hq{
+    bottom:0;
+    left:0;
+    position:absolute;
+    right:0
+}
+.fbar p{
+    display:inline
+}
+.fbar a,#fsettl{
+    text-decoration:none;
+    white-space:nowrap
+}
+.fbar ._Se{
+    padding:0 0 0 27px !important;
+    margin:0 !important}
+.fbar ._Sh{
+    margin-left: 30px;
+}
+._ih a:hover{
+    text-decoration:underline
+}
+.fmulti #fsr{
+    display:block;
+    float:none
+}
+#fsr{
+    float:right;
+    white-space:nowrap
+}
+.fbar{
+    background:#f2f2f2;
+    border-top:1px solid #e4e4e4;
+    line-height:40px;
+    min-width:980px
+}
+.fbar p,.fbar a,#fsettl,#fsett a{
+    color:#777
+}
+.fbar a:hover,#fsett a:hover{
+    color:#333
+}
+.fbar{
+    font-size:small
+}
